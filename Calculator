@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main(void)
+{
+   int choice,op1,op2,res;
+	do
+	{
+				printf("0.exit\n1.add\n2.sub\n3.mul\n4.div\n");
+				printf("enter choice=");
+				scanf("%d",&choice);
+				if(choice!=0)
+				{
+						printf("enter any two number =");
+
+						scanf("%d %d",op1,op2);
+				}
+			    switch(choice)
+			    {
+			    	case 1:
+			    		res=op1+op2;
+			    		break;
+			    	case 2:
+			    		res=op1-op2;
+			    		break;
+			    	case 3:
+			    		res=op1*op2;
+			    		break;
+
+		       	case 4:
+	    	       if(op2!=0)	
+	     				{
+							res=op1/op2;
+							break;
+						}
+						else
+						{
+							printf("divided by 0\n");
+							continue;
+						}		
+				}
+			if(choice!=0)
+			{
+				printf("resul=%d\n",res);
+			}
+    }
+    while(choice!=0);
+    return 0;
+}
